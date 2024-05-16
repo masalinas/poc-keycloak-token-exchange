@@ -25,14 +25,12 @@ In all of them the uri to request this exchange is always de same:
 
 ## Install infrastructure:
 
-Before start we need a Keycloak instance correctly configured. By default this the Token Exchange specificaion is not active in Keycloak so we must deploy Keycloak activating this property like this:
+Before start we need a Keycloak instance correctly configured. By default the Token Exchange specification is not actived in Keycloak so we must to deploy Keycloak with these this properties included. We will used these parameters:
 
-We will used these parameters:
-
-- Port: 8080
-- Keycload admin credentials: admin/password
-- Properties to be activated: token-exchange, admin-fine-grained-authz. Note: **impersonation is activated by default.**
-- Image Tag: quay.io/keycloak/keycloak:24.0.4
+- **Port**: 8080
+- **Keycload admin credentials**: admin/password
+- **Properties to be activated**: token-exchange, admin-fine-grained-authz. Note: **impersonation is activated by default.**
+- **Image Tag**: quay.io/keycloak/keycloak:24.0.4
 
 Execute this docker command:
 
@@ -42,11 +40,11 @@ docker run -d --name keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_A
 
 ## Exchange Token Steps
 
-**STEP01**: Create a realm where configure the keycloak resources like: clients, users, groups, permissions and policies.
+**STEP01**: Create a new realm where configure the keycloak resources like: clients, users, groups, permissions and policies.
 
 ![Realm Name](./images/realm-name.png "Realm Name")
 
-**STEP01**: Create two clients to configure the token-exchange permission
+**STEP01**: Create two clients to configure the token-exchange between them:
 
 First create the **Original Client** to exchange a token with other one from **Internal Client** with this data:
 
@@ -60,7 +58,9 @@ Original Client Name Step:
 Original Client Authentication Flag Step:
 ![Original Client Authentication"](./images/original-client-authentication.png "Original Client Authentication")
 
-Later we can edit the recent original client created and set the name to  Original Client to be filtered in keycloak easily
+Later we can get the client secret from the Credentials Tan inside the client just created:
+
+![Client Secret"](./images/client-secret.png "Client Secret")
 
 Second create the **Internal Client** where we defined a permission to permit exchange tokens with this data:
 
