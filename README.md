@@ -102,6 +102,8 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 **STEP05**: Bind the Client Policyt to the **Internal Client**
 
+![Bind Client Policy"](./images/bind-client-policy.png "Bind Client Policy")
+
 ## Make a test for exchange token
 
 **STEP01**: Issue a token from **Original Client** using the admin credentials:
