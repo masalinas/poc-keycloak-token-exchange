@@ -103,3 +103,7 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ![Exchange Original Client Token"](./images/exchange-token-internal-client.png "Exchange Original Client Token")
 
+## Some Links
+
+![Keycloak Exchange Token Documentation"](https://www.keycloak.org/docs/latest/securing_apps/#_token-exchange)
+
