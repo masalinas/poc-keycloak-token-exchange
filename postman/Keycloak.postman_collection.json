@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "b20938b3-af2a-4aa1-b3e4-ad795ddf5198",
+		"name": "Keycloak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12240969"
+	},
+	"item": [
+		{
+			"name": "Request Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "originalclient",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Be0XcWNfrRZpGpghD3xdRNobWAHPUYLF",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8088/realms/poc/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"realms",
+						"poc",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Internal to Internal Token Exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "originalclient",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Be0XcWNfrRZpGpghD3xdRNobWAHPUYLF",
+							"type": "text"
+						},
+						{
+							"key": "data-urlencode",
+							"value": "grant_type=urn:ietf:params:oauth:grant-type:token-exchange",
+							"type": "text"
+						},
+						{
+							"key": "subject_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLOU5ZUm5xdzVVZ3B1b3V4dy1fcE93MllFU3JtcndHVTZVWjVrbGdxWkVRIn0.eyJleHAiOjE3MTU4NzIzMDIsImlhdCI6MTcxNTg3MjAwMiwianRpIjoiMzkxZjdiNzItMjcyYy00NTBkLThhNjEtNmUyODUzNzc0ZTYwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDg4L3JlYWxtcy9wb2MiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWJmMGZhN2YtMmYyYi00NDc2LTg4ZTEtN2I0MTkxMGVmNmI0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoib3JpZ2luYWxjbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMzQ5NmZjN2YtNWJiOC00NTY4LTg4MjMtOWIwMzZjNGRlODBiIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1wb2MiLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pY3JvcHJvZmlsZS1qd3QgcHJvZmlsZSBlbWFpbCIsInNpZCI6IjM0OTZmYzdmLTViYjgtNDU2OC04ODIzLTliMDM2YzRkZTgwYiIsInVwbiI6ImFkbWluIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiQWRtaW4gQWN0b3IiLCJncm91cHMiOlsiZGVmYXVsdC1yb2xlcy1wb2MiLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4iLCJnaXZlbl9uYW1lIjoiQWRtaW4iLCJmYW1pbHlfbmFtZSI6IkFjdG9yIiwiZW1haWwiOiJhZG1pbkBob3RtYWlsLmNvbSJ9.khailk2EqtDkg753a5mkiK-Vs7oVQGL0M-I21x6EylJBGYWydAoo655Z809q_rF9nVPes6azpNgnpy90X1l054qZvoxaku0LOzzMtowHzlDCy-pvQqZAnvRPBmhlNt1LMIrfNRYmVe0qA3sP_wI-vK6HxPggMZrf6D9RqsLODZ1qpvOzdiEJSSvYFmQcTbQojeRa6DDI29GRpb_0pG-sDWJcwWT62wqWACcBt3rUtdQBaJztOE7ud7B5lrS09vwQ4u6SNU_tFQDloCdQzmdssgabYeEuqes0gfjEiwcpnFBHEZuX5b_sMKcxVro0JpEpf9KETKzQRBxh_Ill219UBQ",
+							"type": "text"
+						},
+						{
+							"key": "audience",
+							"value": "internalclient",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:token-exchange",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8088/realms/poc/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"realms",
+						"poc",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Impersonation Token Exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "originalclient",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Be0XcWNfrRZpGpghD3xdRNobWAHPUYLF",
+							"type": "text"
+						},
+						{
+							"key": "data-urlencode",
+							"value": "grant_type=urn:ietf:params:oauth:grant-type:token-exchange",
+							"type": "text"
+						},
+						{
+							"key": "subject_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLOU5ZUm5xdzVVZ3B1b3V4dy1fcE93MllFU3JtcndHVTZVWjVrbGdxWkVRIn0.eyJleHAiOjE3MTU4NzU0MTcsImlhdCI6MTcxNTg3NTExNywianRpIjoiY2RhNDVmYTYtYWQ0ZC00NGVkLWFlYjQtN2YwNzkzNDFhYTk1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDg4L3JlYWxtcy9wb2MiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWJmMGZhN2YtMmYyYi00NDc2LTg4ZTEtN2I0MTkxMGVmNmI0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoib3JpZ2luYWxjbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMzEwNTkxOTMtMDNlZS00MzcyLWFmODYtNDUxZDkyMjFlNzZiIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1wb2MiLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pY3JvcHJvZmlsZS1qd3QgcHJvZmlsZSBlbWFpbCIsInNpZCI6IjMxMDU5MTkzLTAzZWUtNDM3Mi1hZjg2LTQ1MWQ5MjIxZTc2YiIsInVwbiI6ImFkbWluIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiQWRtaW4gQWN0b3IiLCJncm91cHMiOlsiZGVmYXVsdC1yb2xlcy1wb2MiLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4iLCJnaXZlbl9uYW1lIjoiQWRtaW4iLCJmYW1pbHlfbmFtZSI6IkFjdG9yIiwiZW1haWwiOiJhZG1pbkBob3RtYWlsLmNvbSJ9.cTDMhPb1ZMfUlLpHhfxWGb5Wm_oh7XQ0ZxPSQhqjx9V1xnC1Bh2hKxBGxZlZ3_iHcUDss-K928VjiaVGAsHVcbLhsMqRk0nX-m17FztJ-hT3PomE5HkUCVtVAyLJHLfyYiYy3w8i50GV8pJldqvtGpW2ponbc8YLBrVWgrHhUD6uWF-R0CBrV7GnAlaVEhR2xM4363pyAtXTyq05BqeVrStGIdRNWulvM88O0Nw9xstve55x29jOtVyS8c2mY6WMH2N-FLD3N_RX0GTCSwKUIVkLDMJXVlW1YCcQDCyF5fDhk1bBC5SrOuiA1ANrZpsO-vwh5xGe9at2RG7STYhn4A",
+							"type": "text"
+						},
+						{
+							"key": "audience",
+							"value": "internalclient",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:token-exchange",
+							"type": "text"
+						},
+						{
+							"key": "requested_subject",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8088/realms/poc/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"realms",
+						"poc",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
