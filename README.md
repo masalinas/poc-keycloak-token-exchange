@@ -110,7 +110,7 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ![Token Original Client"](./images/token-original-client.png "Token Original Client")
 
-**STEP02**: Exchange the token obtained before with a new one from **Internal Client**
+**STEP02**: Requets an exchange token obtained before with a new one from **Internal Client**
 
 ![Exchange Original Client Token"](./images/exchange-token-internal-client.png "Exchange Original Client Token")
 
