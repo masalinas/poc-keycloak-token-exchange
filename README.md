@@ -74,6 +74,8 @@ Internal Client Name Step:
 Internal Client Authentication Flag Step:
 ![Internal Client Authentication"](./images/internal-client-authentication.png "Internal Client Authentication")
 
+Also we can recover the client secret used in the next requests.
+
 **STEP02**: Create a admin user with a admin role to be tested
 
 Create the **Admin Role** from Realm roles option menu like this:
