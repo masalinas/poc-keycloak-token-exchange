@@ -48,9 +48,9 @@ docker run -d --name keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_A
 
 First create the **Original Client** to exchange a token with other one from **Internal Client** with this data:
 
-- Client ID: originalclient
-- Name: Original Client
-- Client authentication: true
+- **Client ID**: originalclient
+- **Name**: Original Client
+- **Client authentication**: true
 
 Original Client Name Step:
 ![Original Client Name"](./images/original-client-name.png "Original Client Name")
@@ -64,9 +64,9 @@ Later we can get the client secret from the Credentials Tan inside the client ju
 
 Second create the **Internal Client** where we defined a permission to permit exchange tokens with this data:
 
-- Client ID: internalclient
-- Name: Internal Client
-- Client authentication: true
+- **Client ID**: internalclient
+- **Name**: Internal Client
+- **Client authentication**: true
 
 Internal Client Name Step:
 ![Internal Client Name"](./images/internal-client-name.png "Internal Client Name")
