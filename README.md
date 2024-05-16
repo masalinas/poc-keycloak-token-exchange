@@ -105,5 +105,5 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ## Some Links
 
-![Keycloak Exchange Token Documentation"](https://www.keycloak.org/docs/latest/securing_apps/#_token-exchange)
+[Keycloak Exchange Token Documentation"](https://www.keycloak.org/docs/latest/securing_apps/#_token-exchange)
 
