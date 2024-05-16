@@ -24,16 +24,16 @@ We will used these parameters:
 
 - Port: 8080
 - Keycload admin credentials: admin/password
-- Properties to be activated: token-exchange, admin-fine-grained-authz
+- Properties to be activated: token-exchange, admin-fine-grained-authz. Note: **impersonation is activated by default.**
 - Image Tag: quay.io/keycloak/keycloak:24.0.4
 
 Execute this docker command:
 
 ```shell
-docker run --name -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=password -e KC_FEATURES=token-exchange,admin-fine-grained-authz quay.io/keycloak/keycloak:24.0.4 start-dev
+docker run -d --name consum-keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=password -e KC_FEATURES=token-exchange,admin-fine-grained-authz quay.io/keycloak/keycloak:24.0.4 start-dev
 ```
 
-## Configure Keycloak
+## Exchange Token Steps
 
 **STEP01**: Create a realm where configure the keycloak resources like: clients, users, groups, permissions and policies.
 
@@ -93,7 +93,7 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 **STEP05**: Bind the Client Policyt to the **Internal Client**
 
-## Make a test
+## Make a test for exchange token
 
 **STEP01**: Issue a token from **Original Client** using the admin credentials:
 
@@ -103,7 +103,26 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ![Exchange Original Client Token"](./images/exchange-token-internal-client.png "Exchange Original Client Token")
 
+## Impersonation Steps
+
+Now we have the resources already created: users, groups and clients. We only must create a new client permissions for impersonate users.
+
+Go to Users, permission tabs and create a new **impersonate permission** and bind to the previous client policy created for the Original Client like this:
+
+![Impersonate Permission"](./images/impersonate-permission.png "Impersonate Permission")
+
+## Make a test for Impersonation
+
+**STEP01**: Issue a token from **Original Client** using the admin credentials as previous
+
+![Token Original Client"](./images/token-original-client.png "Token Original Client")
+
+**STEP02**: impersonate our token for a new user
+
+![Impersonate Token"](./images/impersonate-token.png "Impersonate Token")
+
 ## Some Links
 
-[Keycloak Exchange Token Documentation"](https://www.keycloak.org/docs/latest/securing_apps/#_token-exchange)
+- [Keycloak Getting Started](https://www.keycloak.org/getting-started/getting-started-docker)
+- [Keycloak Exchange Token Documentation](https://www.keycloak.org/docs/latest/securing_apps/#_token-exchange)
 
