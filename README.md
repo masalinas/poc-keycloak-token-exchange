@@ -123,7 +123,7 @@ Go to Users, permission tabs and create a new **impersonate permission** and bin
 
 **STEP02**: impersonate our token for a new user
 
-
+![Impersonate Token"](./images/impersonate-token.png "Impersonate Token")
 
 **STEP03**: We can check the session impersonate
 
