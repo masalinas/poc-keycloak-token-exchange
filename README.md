@@ -6,7 +6,8 @@ PoC Keycloak Token Exchange.
 In Keycloak, token exchange is the process of using a set of credentials or token to obtain an entirely different token. Exist 4 token exchange implementations:
 
 1. A client may want to invoke on a less trusted application so it may want to downgrade the current token it has.
-2. A client may want to exchange a Keycloak token for a token stored for a linked social provider account. 3. You may want to trust external tokens minted by other Keycloak realms or foreign IDPs.
+2. A client may want to exchange a Keycloak token for a token stored for a linked social provider account. 
+3. You may want to trust external tokens minted by other Keycloak realms or foreign IDPs.
 4. A client may have a need to impersonate a user
 
 Here’s a short summary of the current capabilities of Keycloak around token exchange:
@@ -15,6 +16,12 @@ Here’s a short summary of the current capabilities of Keycloak around token ex
 2. Internal token to external token exchange: A client can exchange an existing Keycloak token for an external token, i.e. a linked Facebook account
 3. External token to internal token exchange: A client can exchange an external token for a Keycloak token
 4. Impersonation: A client can impersonate a user
+
+In all of them the uri to request this exchange is always de same:
+
+```shell
+/realms/{realm}/protocol/openid-connect/token
+```
 
 ## Install infrastructure:
 
