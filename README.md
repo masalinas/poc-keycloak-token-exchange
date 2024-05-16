@@ -140,6 +140,10 @@ Go to Users, permission tabs and create a new **impersonate permission** and bin
 
 ![Keycloack Session Impersonate"](./images/keycloak-session.png "Keycloack Session Impersonate")
 
+**STEP04**: We can check the new token, how the role is for **user** inside the **Original Client**
+
+!["Token Decoded"](./images/token-decoded.png "Token Decoded")
+
 ## Some Links
 
 - [Keycloak Getting Started](https://www.keycloak.org/getting-started/getting-started-docker)
