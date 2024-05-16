@@ -103,6 +103,10 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ![Exchange Original Client Token"](./images/exchange-token-internal-client.png "Exchange Original Client Token")
 
+**STEP03**: We can check the session impersonate
+
+![Keycloack Session Impersonate"](./images/keycloak-session.png "Keycloack Session Impersonate")
+
 ## Impersonation Steps
 
 Now we have the resources already created: users, groups and clients. We only must create a new client permissions for impersonate users.
@@ -120,6 +124,10 @@ Go to Users, permission tabs and create a new **impersonate permission** and bin
 **STEP02**: impersonate our token for a new user
 
 ![Impersonate Token"](./images/impersonate-token.png "Impersonate Token")
+
+**STEP03**: We can check the session impersonate
+
+![Keycloack Session Impersonate"](./images/keycloak-session.png "Keycloack Session Impersonate")
 
 ## Some Links
 
