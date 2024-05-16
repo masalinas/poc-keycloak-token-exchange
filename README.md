@@ -58,7 +58,7 @@ Original Client Name Step:
 Original Client Authentication Flag Step:
 ![Original Client Authentication"](./images/original-client-authentication.png "Original Client Authentication")
 
-Later we can get the client secret from the Credentials Tan inside the client just created:
+Later we can get the client secret from the **Credentials Tab** inside the client just created:
 
 ![Client Secret"](./images/client-secret.png "Client Secret")
 
