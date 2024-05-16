@@ -100,7 +100,7 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ![Client Policy"](./images/client-policy.png "Client Policy")
 
-**STEP05**: Bind the Client Policyt to the **Internal Client**
+**STEP05**: Bind the Client Policy to the **Internal Client**
 
 ![Bind Client Policy"](./images/bind-client-policy.png "Bind Client Policy")
 
