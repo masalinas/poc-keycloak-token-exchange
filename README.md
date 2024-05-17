@@ -146,6 +146,7 @@ Go to Users, permission tabs and create a new **impersonate permission** and bin
 
 ## Some Links
 
+- [Token Exchange RFC](https://datatracker.ietf.org/doc/html/rfc8693)
 - [Keycloak Getting Started](https://www.keycloak.org/getting-started/getting-started-docker)
 - [Keycloak Exchange Token Documentation](https://www.keycloak.org/docs/latest/securing_apps/#_token-exchange)
 
