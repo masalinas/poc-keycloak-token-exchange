@@ -29,7 +29,7 @@ Before start we need a Keycloak instance correctly configured. By default the **
 
 - **Port**: 8088
 - **Keycload admin credentials**: admin/password
-- **Properties to be activated**: token-exchange, admin-fine-grained-authz. Note: **impersonation is activated by default.**
+- **Properties to be activated**: token-exchange, admin-fine-grained-authz. Note: **impersonation feature is activated by default but you need activate admin-fine-grained-authz to be configured.**
 - **Image Tag**: quay.io/keycloak/keycloak:24.0.4
 
 Execute this docker command:
