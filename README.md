@@ -53,9 +53,11 @@ First create the **Original Client** to exchange a token with other one like **I
 - **Client authentication**: true
 
 Original Client Name Step:
+
 ![Original Client Name"](./images/original-client-name.png "Original Client Name")
 
 Original Client Authentication Flag Step:
+
 ![Original Client Authentication"](./images/original-client-authentication.png "Original Client Authentication")
 
 Later we can get the client secret from the **Credentials Tab** inside the client just created:
