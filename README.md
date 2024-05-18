@@ -138,8 +138,6 @@ Go to Users, permission tabs and create a new **impersonate permission** and bin
 
 **STEP03**: We can check the session impersonate
 
-![Keycloack Session Impersonate"](./images/keycloak-session.png "Keycloack Session Impersonate")
-
 ![Keycloack Impersonation Session"](./images/impersonation-sessions.png "Keycloack Impersonation Session")
 
 **STEP04**: We can check the new token, how the role is for **user** inside the **Original Client**
