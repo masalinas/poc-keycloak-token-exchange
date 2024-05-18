@@ -12,10 +12,10 @@ In Keycloak, token exchange is the process of using a set of credentials or toke
 
 Here’s a short summary of the current capabilities of Keycloak around token exchange:
 
-1. Internal token to internal token exchange: A client can exchange an existing Keycloak token created for a specific client for a new token targeted to a different client
-2. Internal token to external token exchange: A client can exchange an existing Keycloak token for an external token, i.e. a linked Facebook account
-3. External token to internal token exchange: A client can exchange an external token for a Keycloak token
-4. Impersonation: A client can impersonate a user
+1. **Internal token to internal token exchange**: A client can exchange an existing Keycloak token created for a specific client for a new token targeted to a different client
+2. **Internal token to external token exchange**: A client can exchange an existing Keycloak token for an external token, i.e. a linked Facebook account
+3. **External token to internal token exchange**: A client can exchange an external token for a Keycloak token
+4. **Impersonation**: A client can impersonate a user
 
 In all of them the uri to request this exchange is always de same:
 
