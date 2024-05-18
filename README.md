@@ -40,7 +40,7 @@ docker run -d --name keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_A
 
 ## Exchange Token Steps
 
-We are going to explian all steps to configure and test a token exchange between two clients in Keycloak
+We are going to explain all steps to configure and test a token exchange between two clients in Keycloak
 
 **STEP01**: Create a new realm where configure the keycloak resources like: clients, users, groups, permissions and policies.
 
