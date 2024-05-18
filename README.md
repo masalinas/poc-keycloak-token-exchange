@@ -25,7 +25,7 @@ In all of them the uri to request this exchange is always de same:
 
 ## Install infrastructure:
 
-Before start we need a Keycloak instance correctly configured. By default the Token Exchange specification is not actived in Keycloak so we must to deploy Keycloak with these this properties included. We will used these parameters:
+Before start we need a Keycloak instance correctly configured. By default the **Token Exchange Permissions** and **User Detail Management Permissions** feature are not actived in Keycloak so we must to deploy Keycloak with these this properties included. We will used these parameters:
 
 - **Port**: 8080
 - **Keycload admin credentials**: admin/password
