@@ -120,7 +120,7 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 ## Impersonation Steps
 
-Now we have the resources already created: users, groups and clients. We only must create a new client permissions for impersonate users.
+Now we have the resources already created: users, groups and clients. We only must bind a polity to the impersoation permission.
 
 Go to **Users** menu item, **permission tabs** (activate from admin-fine-grained-authz feature) and bind a **client policy** like this:
 
