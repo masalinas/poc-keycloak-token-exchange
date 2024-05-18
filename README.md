@@ -71,9 +71,11 @@ Second create the **Internal Client** where we defined the toke-exchange permiss
 - **Client authentication**: true
 
 Internal Client Name Step:
+
 ![Internal Client Name"](./images/internal-client-name.png "Internal Client Name")
 
 Internal Client Authentication Flag Step:
+
 ![Internal Client Authentication"](./images/internal-client-authentication.png "Internal Client Authentication")
 
 Also we can recover the client secret used in the next requests.
