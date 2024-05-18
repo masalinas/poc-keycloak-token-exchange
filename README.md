@@ -122,9 +122,13 @@ We must activate permissions enabled (this tab exist because we start Keycloak w
 
 Now we have the resources already created: users, groups and clients. We only must create a new client permissions for impersonate users.
 
-Go to Users, permission tabs and create a new **impersonate permission** and bind to the previous client policy created for the Original Client like this:
+Go to Users, permission tabs and bind the permission **impersonate** and to a client policy like this:
 
-![Impersonate Permission"](./images/impersonate-permission.png "Impersonate Permission")
+![Impersonate Permission"](./images/impersonate-permission-for-client.png "Impersonate Permission for client policy")
+
+Idf we want impersonate using a user policty
+
+![Impersonate Permission"](./images/impersonate-permission-for-user.png "Impersonate Permission for user policy")
 
 ## Make a test for Impersonation
 
@@ -132,7 +136,7 @@ Go to Users, permission tabs and create a new **impersonate permission** and bin
 
 ![Token Original Client"](./images/token-original-client.png "Token Original Client")
 
-**STEP02**: impersonate our token for a new user
+**STEP02**: impersonate our token from admin user to user account
 
 ![Impersonate Token"](./images/impersonate-token.png "Impersonate Token")
 
