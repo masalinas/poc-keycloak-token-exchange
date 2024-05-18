@@ -44,7 +44,7 @@ docker run -d --name keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_A
 
 ![Realm Name](./images/realm-name.png "Realm Name")
 
-**STEP02**: Create two clients to configure the token-exchange between them:
+**STEP02**: Create two clients to configure the token-exchange and impersonation between them:
 
 First create the **Original Client** to exchange a token with other one from **Internal Client** with this data:
 
