@@ -27,7 +27,7 @@ In all of them the uri to request this exchange is always de same:
 
 Before start we need a Keycloak instance correctly configured. By default the **Token Exchange Permissions** and **User Detail Management Permissions** feature are not actived in Keycloak so we must to deploy Keycloak with these features included. We will used these configuration:
 
-- **Port**: 8080
+- **Port**: 8088
 - **Keycload admin credentials**: admin/password
 - **Properties to be activated**: token-exchange, admin-fine-grained-authz. Note: **impersonation is activated by default.**
 - **Image Tag**: quay.io/keycloak/keycloak:24.0.4
