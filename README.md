@@ -100,7 +100,7 @@ We are going to explain all steps to configure and test a token exchange between
 
 **STEP01**: Create a permission called **token-exchange** from client **Internal Client** in **Permissions** Tab like this:
 
-We must activate permissions enabled (this tab exist because we start Keycloak with the token-exchange option):
+We must activate permissions enabled (this tab exist because we start Keycloak with the token-exchange feature):
 
 ![Permission Token Exchange"](./images/permission-token-exchange.png "Permission Token Exchange")
 
