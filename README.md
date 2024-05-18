@@ -38,15 +38,13 @@ Execute this docker command:
 docker run -d --name keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=password -e KC_FEATURES=token-exchange,admin-fine-grained-authz quay.io/keycloak/keycloak:24.0.4 start-dev
 ```
 
-## Exchange Token Steps
-
-We are going to explain all steps to configure and test a token exchange between two clients in Keycloak
+## Creare initial resources
 
 **STEP01**: Create a new realm where configure the keycloak resources like: clients, users, groups, permissions and policies.
 
 ![Realm Name](./images/realm-name.png "Realm Name")
 
-**STEP01**: Create two clients to configure the token-exchange between them:
+**STEP02**: Create two clients to configure the token-exchange between them:
 
 First create the **Original Client** to exchange a token with other one from **Internal Client** with this data:
 
@@ -78,7 +76,7 @@ Internal Client Authentication Flag Step:
 
 Also we can recover the client secret used in the next requests.
 
-**STEP02**: Create a admin user with a admin role to be tested
+**STEP03**: Create a admin user with a admin role to be tested
 
 Create the **Admin Role** from Realm roles option menu like this:
 
@@ -92,17 +90,21 @@ Set credentiasl password from credentials. Set not validate the credentials, lik
 
 ![Admin Credentials"](./images/admin-credentials.png "Admin Credentials")
 
-**STEP03**: Create a permission called **token-exchange** from client **Internal Client** in **Permissions** Tab like this:
+## Exchange Token Steps
+
+We are going to explain all steps to configure and test a token exchange between two clients in Keycloak
+
+**STEP01**: Create a permission called **token-exchange** from client **Internal Client** in **Permissions** Tab like this:
 
 We must activate permissions enabled (this tab exist because we start Keycloak with the token-exchange option):
 
 ![Permission Token Exchange"](./images/permission-token-exchange.png "Permission Token Exchange")
 
-**STEP04**: Create a client policy attached to the **Original Client**
+**STEP02**: Create a client policy attached to the **Original Client**
 
 ![Client Policy"](./images/client-policy.png "Client Policy")
 
-**STEP05**: Bind the Client Policy to the **Internal Client**
+**STEP03**: Bind the Client Policy to the **Internal Client**
 
 ![Bind Client Policy"](./images/bind-client-policy.png "Bind Client Policy")
 
