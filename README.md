@@ -1,5 +1,5 @@
 # Description
-PoC Keycloak Token Exchange ans Impersonation
+PoC Keycloak Token Exchange and Impersonation
 
 ## Introduccion
 
