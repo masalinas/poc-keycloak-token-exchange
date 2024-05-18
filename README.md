@@ -46,7 +46,7 @@ docker run -d --name keycloak -p 8088:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_A
 
 **STEP02**: Create two clients to configure the token-exchange and impersonation between them:
 
-First create the **Original Client** to exchange a token with other one from **Internal Client** with this data:
+First create the **Original Client** to exchange a token with other one like **Internal Client** with this data:
 
 - **Client ID**: originalclient
 - **Name**: Original Client
