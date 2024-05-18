@@ -64,7 +64,7 @@ Later we can get the client secret from the **Credentials Tab** inside the clien
 
 ![Client Secret"](./images/client-secret.png "Client Secret")
 
-Second create the **Internal Client** where we defined a permission to permit exchange tokens with this data:
+Second create the **Internal Client** where we defined the toke-exchange permission to permit exchange tokens from other clients
 
 - **Client ID**: internalclient
 - **Name**: Internal Client
