@@ -157,6 +157,10 @@ If we want impersonate using a **user policty**:
 
 !["Token Decoded"](./images/token-decoded.png "Token Decoded")
 
+## Notes
+
+In case we want inpersonate in the same client, is not necessary bind any policy to the token-exchange of the client, only we must bind policies to the impersonate permission
+
 ## Some Links
 
 - [Token Exchange RFC](https://datatracker.ietf.org/doc/html/rfc8693)
