@@ -159,7 +159,7 @@ If we want impersonate using a **user policty**:
 
 ## Notes
 
-In case we want inpersonate in the same client, is not necessary bind any policy to the token-exchange of the client, only we must bind policies to the impersonate permission
+In case we want impersonate in the same client, is not necessary bind any policy to the token-exchange of the client, only we must bind policies to the impersonate permission
 
 ## Some Links
 
